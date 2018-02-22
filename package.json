@@ -1,0 +1,14 @@
+{
+  "scripts": {
+    "watch": "parcel index.html",
+    "clean": "rm -rf ./dist",
+    "build": "npm run clean && parcel build --public-url / index.html",
+    "deploy": "npm run build && surge --project ./dist/ --domain fortcircle.malone.io"
+  },
+  "dependencies": {
+    "two.js": "^0.7.0-alpha.1"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.6.2"
+  }
+}
